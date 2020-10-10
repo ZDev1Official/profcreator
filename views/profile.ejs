@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .pfp{
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body{
+      background: lightblue;
+    }
+  </style>
+  <title>Here is your profile: <%= info.fullname %>!</title>
+</head>
+<body>
+  <div style="text-align: center;"  class="card">
+    <img src="<%= info.imageurl %>" alt="<%= info.fullname  %>'s image'" class="pfp">
+    <h3 class="card-title"><%= info.fullname %></h3>
+    <br>
+    <b><a href="https://repl.it/@<%= info.username  %>"><%= info.username %></a></i></b>
+    <br>
+    <p class="card-body">
+      <%= info.bio %>
+    </p>
+    <b>Email: <a href="mailto:<%= info.email %>"><%= info.email %></a></b>
+    <br>
+    <b>Website: <a href="<%= info.website %>"><%= info.website %></a></b>
+    <br>
+    <button class="btn btn-success" onclick="window.location = '/'">Back</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body{
+      background: lightblue;
+    }
+  </style>
+  <title>Profile Creator</title>
+</head>
+<body>
+  <h1>Profile Creator</h1>
+  <br>
+  <br>
+  <form class="form-group" action="/profile" method="post">
+    <input class="form-control" name="fullname" placeholder="Full name">
+    <br>
+    <input class="form-control" name="username" placeholder="Username">
+    <br>
+    <textarea class="form-control" name="bio" placeholder="Bio"></textarea>
+    <br>
+    <input class="form-control" type="email" name="email" placeholder="Email">
+    <br>
+    <input class="form-control" name="website" placeholder="Website">
+    <br>
+    <input class="form-control" name="imageurl" placeholder="Image (image URL)">
+    <br>
+    <input class="btn btn-success" type="submit" value="Submit">
+    <button onclick="window.close()" class="btn btn-danger">Cancel</button>
+  </form>
+</body>
+</html>
